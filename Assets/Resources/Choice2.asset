@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cd7b1432728bfbc983b85806cc8241, type: 3}
+  m_Name: Choice2
+  m_EditorClassIdentifier: 
+  choiceID: "N\xE3o bar"
+  text: "N\xE3o"
+  outcomes:
+  - targetEvent: {fileID: 11400000, guid: 2ba7b281a6fe2ab7986255f9e25df848, type: 2}
+    probability: 70
+  - targetEvent: {fileID: 11400000, guid: 05a6cd907db8e6159a53c653674fc74f, type: 2}
+    probability: 30

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b47acdbfb347b8619479d893d82333e, type: 3}
+  m_Name: EventMorra
+  m_EditorClassIdentifier: 
+  eventID: 
+  steps:
+  - {fileID: 11400000, guid: bdfd0724b8b6cd6038ccf3fb9d4720bd, type: 2}
+  choices: []

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b47acdbfb347b8619479d893d82333e, type: 3}
+  m_Name: Event1
+  m_EditorClassIdentifier: 
+  eventID: ir ao bar?
+  steps:
+  - {fileID: 11400000, guid: f15dba0698fbdec028f565f64fcb9d32, type: 2}
+  choices:
+  - {fileID: 11400000, guid: e3db499ebd72a92dc9a289757609dcc9, type: 2}
+  - {fileID: 11400000, guid: ac5f317f786df7a52a8c94ee6aaaef79, type: 2}
