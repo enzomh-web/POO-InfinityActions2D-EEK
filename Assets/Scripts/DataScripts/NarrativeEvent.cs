@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -7,4 +8,5 @@ public class NarrativeEvent : ScriptableObject
     public string eventID;
     public NarrativeStep[] steps;
     public NarrativeChoice[] choices;
+    public bool isTerminalEvent;
 }

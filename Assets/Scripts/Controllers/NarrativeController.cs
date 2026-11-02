@@ -8,20 +8,15 @@ using System.Threading.Tasks;
 using UnityEngine.AI;
 public class NarrativeController : MonoBehaviour
 {
-    [Header("Referências")]
-    [SerializeField] private TMP_Text textBox;
-
-    [Header("Escolhas (Choices)")]
-    [SerializeField] private Transform choicesContainer;
-    [SerializeField] private GameObject choiceButtonPrefab;
-
-
+    [SerializeField] private NarrativeUI narrativeUI;
     private NarrativeEvent currentEvent;
     private int currentStepIndex;
     private int currentLineIndex;
 
     private bool isRunning;
     private bool awaitingChoice;
+
+    public event System.Action OnNarrativeFinished;
 
 
     private void Update()
@@ -34,7 +29,7 @@ public class NarrativeController : MonoBehaviour
 
     public void StarEvent(NarrativeEvent narrativeEvent)
     {
-        ClearChoices();
+        narrativeUI.ClearChoices();
 
         currentEvent = narrativeEvent;
         currentStepIndex = 0;
@@ -63,7 +58,7 @@ public class NarrativeController : MonoBehaviour
 
             if (step != null && step.lines != null && currentLineIndex < step.lines.Length)
             {
-                textBox.text = step.lines[currentLineIndex];
+                narrativeUI.DisplayText(step.lines[currentLineIndex]);
                 return;
             }
 
@@ -76,7 +71,7 @@ public class NarrativeController : MonoBehaviour
 
     private void DisplayChoices()
     {
-        ClearChoices();
+        narrativeUI.ClearChoices();
 
         if (currentEvent.choices == null || currentEvent.choices.Length == 0)
         {
@@ -86,17 +81,7 @@ public class NarrativeController : MonoBehaviour
 
         awaitingChoice = true;
 
-        foreach (NarrativeChoice choice in currentEvent.choices)
-        {
-            GameObject buttonObj = Instantiate(choiceButtonPrefab, choicesContainer);
-
-            Button button = buttonObj.GetComponent<Button>();
-            TMP_Text buttonText = buttonObj.GetComponentInChildren<TMP_Text>();
-
-            buttonText.text = choice.text;
-
-            button.onClick.AddListener(() => SelectChoice(choice));
-        }
+        narrativeUI.DisplayChoices(currentEvent.choices, SelectChoice);
     }
 
     private void SelectChoice(NarrativeChoice choice)
@@ -104,7 +89,7 @@ public class NarrativeController : MonoBehaviour
         if (!awaitingChoice) return;
 
         awaitingChoice = false;
-        ClearChoices();
+        narrativeUI.ClearChoices();
 
         NarrativeEvent nextEvent =  GetRandomOutcome(choice);
 
@@ -135,19 +120,11 @@ public class NarrativeController : MonoBehaviour
         return choice.outcomes[choice.outcomes.Length - 1]. targetEvent;
     }
 
-    private void ClearChoices()
-    {
-        foreach (Transform child in choicesContainer)
-        {
-            Destroy(child.gameObject);
-        }
-    }
-
     private void FinishEvent()
     {
         isRunning = false;
         awaitingChoice = false;
 
-        Debug.Log("NarrativeEvent finalizado!");
+        OnNarrativeFinished?.Invoke();
     }
 }

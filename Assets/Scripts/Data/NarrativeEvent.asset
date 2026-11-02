@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b47acdbfb347b8619479d893d82333e, type: 3}
-  m_Name: Event4
+  m_Name: NarrativeEvent
   m_EditorClassIdentifier: 
-  eventID: Banheiro bom
-  steps: []
+  eventID: fim
+  steps:
+  - stepID: 
+    lines:
+    - "moi\xF4"
   choices: []
+  isTerminalEvent: 0

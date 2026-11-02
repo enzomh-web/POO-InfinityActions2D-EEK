@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 2029603432}
   - component: {fileID: 2029603431}
   - component: {fileID: 2029603430}
+  - component: {fileID: 2029603433}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -673,9 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b2945baee3c554f98b14c48a56b794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBox: {fileID: 61472190}
-  choicesContainer: {fileID: 843826488}
-  choiceButtonPrefab: {fileID: 6425986587988489632, guid: 324e446c02071d5c3a79a43786dee4d0, type: 3}
+  narrativeUI: {fileID: 2029603433}
 --- !u!114 &2029603431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeController: {fileID: 2029603430}
-  initialEvent: {fileID: 11400000, guid: d9db7eefa68581ccba5fa0756a6cd254, type: 2}
+  initialEvent: {fileID: 11400000, guid: 5a9a88b92cd8f0abfb2cf77045589fad, type: 2}
 --- !u!4 &2029603432
 Transform:
   m_ObjectHideFlags: 0
@@ -705,6 +704,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2029603433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029603429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c40c5dc146be708bcbe2a8a698a03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 61472190}
+  choicesContainer: {fileID: 843826488}
+  choiceButtonPrefab: {fileID: 6425986587988489632, guid: 324e446c02071d5c3a79a43786dee4d0, type: 3}
 --- !u!1001 &5250823836101218263
 PrefabInstance:
   m_ObjectHideFlags: 0
