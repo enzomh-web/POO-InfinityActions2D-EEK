@@ -9,12 +9,17 @@ using UnityEngine.AI;
 public class NarrativeController : MonoBehaviour
 {
     [SerializeField] private NarrativeUI narrativeUI;
+    [SerializeField] private NarrativeEvent centralEvent;
+
     private NarrativeEvent currentEvent;
+    private NarrativeEvent nextEvent;
+
     private int currentStepIndex;
     private int currentLineIndex;
 
     private bool isRunning;
     private bool awaitingChoice;
+    private bool awaitingOutcome;
 
     public event System.Action OnNarrativeFinished;
 
@@ -43,6 +48,21 @@ public class NarrativeController : MonoBehaviour
 
     private void Advance()
     {
+        if (awaitingOutcome)
+        {
+            awaitingOutcome = false;
+
+            if (nextEvent == null)
+            {
+                FinishEvent();
+                return;
+            }
+        
+            StarEvent(nextEvent);
+            nextEvent = null;
+            return;
+        }
+
         if (!isRunning) return;
 
         currentLineIndex++;
@@ -91,15 +111,19 @@ public class NarrativeController : MonoBehaviour
         awaitingChoice = false;
         narrativeUI.ClearChoices();
 
-        NarrativeEvent nextEvent =  GetRandomOutcome(choice);
+        nextEvent =  GetRandomOutcome(choice);
 
-        if (nextEvent == null)
+        if (choice.responseText != null && choice.responseText != string.Empty)
         {
-            FinishEvent();
-            return;
+            narrativeUI.DisplayText(choice.responseText);
+            awaitingOutcome = true; 
+        }
+        else
+        {
+            StarEvent(nextEvent);
         }
 
-        StarEvent(nextEvent);
+
     }
 
     private NarrativeEvent GetRandomOutcome(NarrativeChoice choice)
@@ -122,6 +146,14 @@ public class NarrativeController : MonoBehaviour
 
     private void FinishEvent()
     {
+        if (!currentEvent.isTerminalEvent)
+        {
+            currentEvent = centralEvent;
+            StarEvent(currentEvent);
+
+            return;
+        }
+
         isRunning = false;
         awaitingChoice = false;
 

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b47acdbfb347b8619479d893d82333e, type: 3}
-  m_Name: NarrativeEvent
+  m_Name: JogarFora
   m_EditorClassIdentifier: 
-  eventID: fim
+  eventID: 
   steps:
   - stepID: 
     lines:
-    - "moi\xF4"
+    - "Voc\xEA joga a pedra fora"
   choices: []
   isTerminalEvent: 0

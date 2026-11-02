@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b47acdbfb347b8619479d893d82333e, type: 3}
+  m_Name: CentralEvent
+  m_EditorClassIdentifier: 
+  eventID: Evento Inicial
+  steps:
+  - stepID: 
+    lines:
+    - "O que fa\xE7o agora?"
+  choices:
+  - text: Seguir em frente
+    responseText: Seguindo em frente
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: f8a4525b872713083a3113efc1afb237, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: d9b78edb8f96e016296ac92303bc71e8, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: 3c8ad4e7d2c1efca6845d63ecd558f92, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: dd8189499b46d61e5ad9ef3709466c58, type: 2}
+      probability: 25
+  - text: Voltar
+    responseText: Voltando
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: f8a4525b872713083a3113efc1afb237, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: d9b78edb8f96e016296ac92303bc71e8, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: 3c8ad4e7d2c1efca6845d63ecd558f92, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: dd8189499b46d61e5ad9ef3709466c58, type: 2}
+      probability: 25
+  - text: Ir para a esquerda
+    responseText: Indo para a esquerda
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: f8a4525b872713083a3113efc1afb237, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: d9b78edb8f96e016296ac92303bc71e8, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: 3c8ad4e7d2c1efca6845d63ecd558f92, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: dd8189499b46d61e5ad9ef3709466c58, type: 2}
+      probability: 25
+  - text: Ir para a direita
+    responseText: Indo para a direita
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: f8a4525b872713083a3113efc1afb237, type: 2}
+      probability: 25
+    - targetEvent: {fileID: 11400000, guid: d9b78edb8f96e016296ac92303bc71e8, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: 3c8ad4e7d2c1efca6845d63ecd558f92, type: 2}
+      probability: 12.5
+    - targetEvent: {fileID: 11400000, guid: dd8189499b46d61e5ad9ef3709466c58, type: 2}
+      probability: 25
+  isTerminalEvent: 0

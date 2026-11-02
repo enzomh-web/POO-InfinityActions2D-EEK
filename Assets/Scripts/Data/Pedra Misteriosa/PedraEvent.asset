@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b47acdbfb347b8619479d893d82333e, type: 3}
+  m_Name: PedraEvent
+  m_EditorClassIdentifier: 
+  eventID: 
+  steps:
+  - stepID: 
+    lines:
+    - "Que pedra estranha, o que ser\xE1 que \xE9?"
+    - "O que fa\xE7o agora?"
+  choices:
+  - text: Analisar Pedra
+    responseText: 
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 69b7b90ab3e8c0dafad18a7d90cb8cc3, type: 2}
+      probability: 70
+    - targetEvent: {fileID: 11400000, guid: 0ab827c63519d9d85a66812ff6bfeeb5, type: 2}
+      probability: 30
+  - text: Guardar a pedra na bolsa
+    responseText: 
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 5c6482e2ad41b0d03888f0f575014b0b, type: 2}
+      probability: 100
+  - text: Jogar pedra fora
+    responseText: 
+    outcomes:
+    - targetEvent: {fileID: 11400000, guid: 4f94b8412b02341459a2d8137c8791ed, type: 2}
+      probability: 100
+  isTerminalEvent: 0

@@ -7,9 +7,11 @@ public class GameController : MonoBehaviour
 {
     [Header("Referências")]
     [SerializeField] private NarrativeController narrativeController;
+    [SerializeField] private NarrativeUI narrativeUI;
 
     [Header("Narrativa")]
     [SerializeField] private NarrativeEvent initialEvent;
+    [SerializeField] private NarrativeEvent centralEvent;
 
     private float elapsedTime;
 
@@ -38,7 +40,7 @@ public class GameController : MonoBehaviour
     {
         isGameActive = false;
 
-        Debug.Log("Receba");
+        narrativeUI.DisplayText("Fim de Jogo");
 
         // Futramente, inserir troca para a cena que mostra o tempo de sobrevivencia 
     }
