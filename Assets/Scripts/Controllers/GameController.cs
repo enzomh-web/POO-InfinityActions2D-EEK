@@ -2,6 +2,7 @@ using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -40,9 +41,9 @@ public class GameController : MonoBehaviour
     {
         isGameActive = false;
 
-        narrativeUI.DisplayText("Fim de Jogo");
+        GameData.elapsedTime = elapsedTime;
 
-        // Futramente, inserir troca para a cena que mostra o tempo de sobrevivencia 
+        SceneManager.LoadScene(1);
     }
 
     private void OnEnable()
