@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
 
         GameData.elapsedTime = elapsedTime;
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene((int)GameData.SceneEnum.ENDGAME);
     }
 
     private void OnEnable()

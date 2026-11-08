@@ -3,25 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class ButtonEvents : MonoBehaviour
 {
-    public enum SceneEnum
-    {
-        PLAY = 0,
-        TITLE = 1,
-        CREDITS = 2
-    }
-
     public void Play()
     {
-        SceneManager.LoadScene((int)SceneEnum.PLAY);
+        SceneManager.LoadScene((int)GameData.SceneEnum.PLAY);
     }
+
     public void ReturnToTitleScreen()
     {
-        SceneManager.LoadScene((int)SceneEnum.TITLE);
+        SceneManager.LoadScene((int)GameData.SceneEnum.TITLE);
     }
+
     public void Credits()
     {
-        SceneManager.LoadScene((int)SceneEnum.CREDITS);
+        SceneManager.LoadScene((int)GameData.SceneEnum.CREDITS);
     }
+
+    public void EndGameScreen()
+    {
+        SceneManager.LoadScene((int)GameData.SceneEnum.CREDITS);
+    }
+    
     public void Quit()
     {
         Application.Quit();
