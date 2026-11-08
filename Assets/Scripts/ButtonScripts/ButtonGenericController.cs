@@ -15,11 +15,15 @@ public class ButtonGenericController : MonoBehaviour
 
     private void OnEnable()
     {
+        if (buttonEvent == null) return;
+
         button.onClick.AddListener(RunEvent); 
     }
 
     private void OnDisable()
     {
+        if (buttonEvent == null) return;
+
         button.onClick.RemoveListener(RunEvent);
     }
 
