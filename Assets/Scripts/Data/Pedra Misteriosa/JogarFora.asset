@@ -18,4 +18,5 @@ MonoBehaviour:
     lines:
     - "Voc\xEA joga a pedra fora"
   choices: []
+  spriteConfig: []
   isTerminalEvent: 0

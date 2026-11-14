@@ -8,5 +8,6 @@ public class NarrativeEvent : ScriptableObject
     public string eventID;
     public NarrativeStep[] steps;
     public NarrativeChoice[] choices;
+    public SpriteConfig[] spriteConfig;
     public bool isTerminalEvent;
 }
