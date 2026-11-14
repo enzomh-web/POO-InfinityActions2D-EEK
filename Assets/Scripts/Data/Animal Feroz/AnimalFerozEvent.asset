@@ -61,4 +61,10 @@ MonoBehaviour:
       probability: 25
     - targetEvent: {fileID: 11400000, guid: fe1ff94327252c5ae9e87daeee9fba82, type: 2}
       probability: 75
+  spriteConfig:
+  - spawnPos: {x: 0, y: 0}
+    spawnTime: 0
+    stepIndex: 0
+    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
+    sprite: {fileID: 1816428620597076094, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

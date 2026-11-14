@@ -10,6 +10,7 @@ public class NarrativeController : MonoBehaviour
 {
     [SerializeField] private NarrativeUI narrativeUI;
     [SerializeField] private NarrativeEvent centralEvent;
+    [SerializeField] private SpriteController spriteController;
 
     private NarrativeEvent currentEvent;
     private NarrativeEvent nextEvent;
@@ -43,6 +44,7 @@ public class NarrativeController : MonoBehaviour
         isRunning = true;
         awaitingChoice = false;
 
+        spriteController.BeginEvent(currentEvent);
         DisplayCurrentLine();
     } 
 
@@ -67,6 +69,7 @@ public class NarrativeController : MonoBehaviour
 
         currentLineIndex++;
 
+        spriteController.EnterStep(currentEvent, currentLineIndex);
         DisplayCurrentLine();
     }
 
@@ -149,6 +152,7 @@ public class NarrativeController : MonoBehaviour
         if (!currentEvent.isTerminalEvent)
         {
             currentEvent = centralEvent;
+            spriteController.ClearAllSprites();
             StarEvent(currentEvent);
 
             return;
