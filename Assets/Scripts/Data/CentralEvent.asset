@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: Evento Inicial
   steps:
-  - stepID: 
-    lines:
-    - "O que fa\xE7o agora?"
+  - text: "O que fa\xE7o agora?"
+    spriteConfigs: []
   choices:
   - text: Seguir em frente
     responseText: Seguindo em frente
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -33,6 +36,10 @@ MonoBehaviour:
       probability: 25
   - text: Voltar
     responseText: Voltando
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -46,6 +53,10 @@ MonoBehaviour:
       probability: 25
   - text: Ir para a esquerda
     responseText: Indo para a esquerda
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -59,6 +70,10 @@ MonoBehaviour:
       probability: 25
   - text: Ir para a direita
     responseText: Indo para a direita
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -70,10 +85,4 @@ MonoBehaviour:
       probability: 12.5
     - targetEvent: {fileID: 11400000, guid: dd8189499b46d61e5ad9ef3709466c58, type: 2}
       probability: 25
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 0
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: -5728037494532715683, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

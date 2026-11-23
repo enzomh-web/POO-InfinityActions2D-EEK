@@ -14,13 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 
   steps:
-  - stepID: 
-    lines:
-    - Acho que acabei de ver um animal feroz logo a frente
-    - "O que fa\xE7o agora?"
+  - text: Acho que acabei de ver um animal feroz logo a frente.
+    spriteConfigs: []
+  - text: "O que fa\xE7o agora?"
+    spriteConfigs: []
   choices:
   - text: Correr e fugir
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 7d34b7c454e7126258a38f4d199c1af4, type: 2}
       probability: 65
@@ -28,6 +33,11 @@ MonoBehaviour:
       probability: 35
   - text: Desviar rapidamente
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 7d34b7c454e7126258a38f4d199c1af4, type: 2}
       probability: 50
@@ -35,6 +45,11 @@ MonoBehaviour:
       probability: 50
   - text: Pular o animal
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 7d34b7c454e7126258a38f4d199c1af4, type: 2}
       probability: 25
@@ -42,6 +57,11 @@ MonoBehaviour:
       probability: 75
   - text: Voltar silenciosamente
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 7d34b7c454e7126258a38f4d199c1af4, type: 2}
       probability: 80
@@ -49,6 +69,11 @@ MonoBehaviour:
       probability: 20
   - text: Esconder-se
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 7d34b7c454e7126258a38f4d199c1af4, type: 2}
       probability: 65
@@ -56,15 +81,14 @@ MonoBehaviour:
       probability: 35
   - text: "Tentar captur\xE1-lo"
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 7d34b7c454e7126258a38f4d199c1af4, type: 2}
       probability: 25
     - targetEvent: {fileID: 11400000, guid: fe1ff94327252c5ae9e87daeee9fba82, type: 2}
       probability: 75
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 0
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: 1816428620597076094, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

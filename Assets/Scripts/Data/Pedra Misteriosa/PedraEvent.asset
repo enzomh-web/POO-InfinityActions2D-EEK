@@ -14,13 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 
   steps:
-  - stepID: 
-    lines:
-    - "Que pedra estranha, o que ser\xE1 que \xE9?"
-    - "O que fa\xE7o agora?"
+  - text: "Que pedra estranha, o que ser\xE1 que \xE9?"
+    spriteConfigs: []
+  - text: "O que fa\xE7o agora?"
+    spriteConfigs: []
   choices:
   - text: Analisar Pedra
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 69b7b90ab3e8c0dafad18a7d90cb8cc3, type: 2}
       probability: 70
@@ -28,18 +33,22 @@ MonoBehaviour:
       probability: 30
   - text: Guardar a pedra na bolsa
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 5c6482e2ad41b0d03888f0f575014b0b, type: 2}
       probability: 100
   - text: Jogar pedra fora
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 4f94b8412b02341459a2d8137c8791ed, type: 2}
       probability: 100
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 0
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: -5728037494532715683, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

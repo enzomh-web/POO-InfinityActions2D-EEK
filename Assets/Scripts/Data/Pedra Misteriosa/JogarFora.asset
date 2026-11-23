@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 
   steps:
-  - stepID: 
-    lines:
-    - "Voc\xEA joga a pedra fora"
+  - text: O personagem joga a pedra fora
+    spriteConfigs: []
   choices: []
-  spriteConfig: []
   isTerminalEvent: 0

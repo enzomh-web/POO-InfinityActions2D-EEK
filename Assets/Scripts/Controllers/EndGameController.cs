@@ -5,7 +5,7 @@ using TMPro;
 public class EndGameController : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
-    private float initialDelay = 1f;
+    [SerializeField] private float initialDelay = 1f;
     private float inputTime;
 
     private void Start()

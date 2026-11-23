@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         elapsedTime = 0f;
         isGameActive = true;
 
-        narrativeController.StarEvent(initialEvent);
+        narrativeController.StartEvent(initialEvent);
     }
 
     public void EndGame()

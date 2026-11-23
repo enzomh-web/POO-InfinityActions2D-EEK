@@ -1,10 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class NarrativeStep
 {
-    public string stepID;
-
     [TextArea(3, 5)]
-    public string[] lines;
+    public string text;
+    public List<SpriteConfig> spriteConfigs;
 }

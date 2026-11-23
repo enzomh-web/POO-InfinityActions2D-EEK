@@ -14,13 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: Abismo Encontrado
   steps:
-  - stepID: 
-    lines:
-    - Ufa! Que bom que parei antes de cair no abismo
-    - "O que fa\xE7o agora?"
+  - text: "Uf\xE1! Que bom que parei antes de cair no abismo"
+    spriteConfigs: []
+  - text: "O que fa\xE7o agora?"
+    spriteConfigs: []
   choices:
   - text: Tentar descer do abismo
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 4a7accb383b357609b13e4b94f47f1c7, type: 2}
       probability: 90
@@ -28,6 +33,11 @@ MonoBehaviour:
       probability: 10
   - text: Tentar pular para o outro lado do abismo
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 5ea80eac7af31ebbba96f318be45ec3d, type: 2}
       probability: 75
@@ -35,13 +45,12 @@ MonoBehaviour:
       probability: 25
   - text: Voltar por onde veio
     responseText: 
+    spriteConfig:
+      spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 0}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 152341cbc2ca88cbf9ec275bad4b825e, type: 2}
       probability: 100
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 0
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: 1816428620597076094, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

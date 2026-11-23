@@ -14,14 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: Falha de qualquer evento do animal
   steps:
-  - stepID: 
-    lines:
-    - O personagem foi pego pelo animal feroz!
+  - text: O personagem foi pego pelo animal feroz!
+    spriteConfigs: []
   choices: []
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 0
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: 7359401131090198652, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 1

@@ -14,20 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: Encontrar caminho
   steps:
-  - stepID: 
-    lines:
-    - "Inacredit\xE1vel! Encontrei um novo caminho"
-    - Seguindo em frente com a coragem a mil
+  - text: "Inacredit\xE1vel! Encontrei um novo caminho."
+    spriteConfigs: []
+  - text: Seguindo em frente com a coragem a mil.
+    spriteConfigs: []
   choices: []
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 1
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: 3584020670089990656, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 1
-    stepIndex: 1
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: 1816428620597076094, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

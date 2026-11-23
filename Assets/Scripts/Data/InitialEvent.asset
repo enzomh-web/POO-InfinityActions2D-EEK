@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: Evento Inicial
   steps:
-  - stepID: 
-    lines:
-    - Parece que estou perdido
+  - text: Parece que estou perdido
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: 7359401131090198652, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
+      animations:
+      - animationType: 3
+        animationMoment: 1
+        duration: 0.7
+        targetPos: {x: 0.3, y: 0}
+        rotationSpeed: 220
   choices: []
-  spriteConfig:
-  - spawnPos: {x: 0, y: 0}
-    spawnTime: 0
-    stepIndex: 0
-    prefab: {fileID: 6816455410716362594, guid: cd5a059de0de298678b22dd8a679b8cb, type: 3}
-    sprite: {fileID: -5728037494532715683, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
   isTerminalEvent: 0

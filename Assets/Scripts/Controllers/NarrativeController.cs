@@ -6,6 +6,7 @@ using System.Data.Common;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine.AI;
+using System.Linq;
 public class NarrativeController : MonoBehaviour
 {
     [SerializeField] private NarrativeUI narrativeUI;
@@ -16,7 +17,6 @@ public class NarrativeController : MonoBehaviour
     private NarrativeEvent nextEvent;
 
     private int currentStepIndex;
-    private int currentLineIndex;
 
     private bool isRunning;
     private bool awaitingChoice;
@@ -33,19 +33,20 @@ public class NarrativeController : MonoBehaviour
         }
     }
 
-    public void StarEvent(NarrativeEvent narrativeEvent)
+    public void StartEvent(NarrativeEvent narrativeEvent)
     {
         narrativeUI.ClearChoices();
 
         currentEvent = narrativeEvent;
         currentStepIndex = 0;
-        currentLineIndex = 0;
 
         isRunning = true;
         awaitingChoice = false;
+        awaitingOutcome = false;
 
-        spriteController.BeginEvent(currentEvent);
-        DisplayCurrentLine();
+        spriteController.ClearAllSprites();
+
+        DisplayCurrentText();
     } 
 
     private void Advance()
@@ -60,36 +61,42 @@ public class NarrativeController : MonoBehaviour
                 return;
             }
         
-            StarEvent(nextEvent);
+            StartEvent(nextEvent);
             nextEvent = null;
             return;
         }
 
         if (!isRunning) return;
-
-        currentLineIndex++;
-
-        spriteController.EnterStep(currentEvent, currentLineIndex);
-        DisplayCurrentLine();
+        
+        currentStepIndex++;
+        DisplayCurrentText();
     }
 
-    private void DisplayCurrentLine()
+    private void DisplayCurrentText()
     {
-        while (currentStepIndex < currentEvent.steps.Length)
+        if (currentEvent.steps == null || currentStepIndex >= currentEvent.steps.Length)
         {
-            NarrativeStep step = currentEvent.steps[currentStepIndex];
-
-            if (step != null && step.lines != null && currentLineIndex < step.lines.Length)
-            {
-                narrativeUI.DisplayText(step.lines[currentLineIndex]);
-                return;
-            }
-
-            currentStepIndex++;
-            currentLineIndex = 0;
+            DisplayChoices();
+            return;
         }
 
-        DisplayChoices();
+        NarrativeStep currentStep = currentEvent.steps[currentStepIndex];
+
+        if (currentStep == null)
+        {
+            Advance();
+            return;
+        }
+
+        spriteController.ShowStep(currentStep.spriteConfigs);
+
+        if (string.IsNullOrEmpty(currentStep.text))
+        {
+            Advance();
+            return;
+        }
+
+        narrativeUI.DisplayText(currentStep.text);
     }
 
     private void DisplayChoices()
@@ -114,19 +121,19 @@ public class NarrativeController : MonoBehaviour
         awaitingChoice = false;
         narrativeUI.ClearChoices();
 
-        nextEvent =  GetRandomOutcome(choice);
+        nextEvent = GetRandomOutcome(choice);
 
-        if (choice.responseText != null && choice.responseText != string.Empty)
+        if (!string.IsNullOrEmpty(choice.responseText))
         {
+            spriteController.ShowChoice(choice.spriteConfig);
+
             narrativeUI.DisplayText(choice.responseText);
-            awaitingOutcome = true; 
+            awaitingOutcome = true;
         }
         else
         {
-            StarEvent(nextEvent);
+            StartEvent(nextEvent);
         }
-
-
     }
 
     private NarrativeEvent GetRandomOutcome(NarrativeChoice choice)
@@ -149,12 +156,12 @@ public class NarrativeController : MonoBehaviour
 
     private void FinishEvent()
     {
+        spriteController.ClearAllSprites();
+
         if (!currentEvent.isTerminalEvent)
         {
             currentEvent = centralEvent;
-            spriteController.ClearAllSprites();
-            StarEvent(currentEvent);
-
+            StartEvent(currentEvent);
             return;
         }
 
