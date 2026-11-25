@@ -15,9 +15,37 @@ MonoBehaviour:
   eventID: 
   steps:
   - text: Acho que acabei de ver um animal feroz logo a frente.
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0.3}
+      prefab: {fileID: 0}
+      sprite: {fileID: 21300000, guid: 6551d6346c2830a07b3f45ea10ba2885, type: 3}
+      animations:
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
+      - animationType: 1
+        animationMoment: 2
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   - text: "O que fa\xE7o agora?"
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: -8360621857648827146, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations:
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
+      - animationType: 1
+        animationMoment: 2
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   choices:
   - text: Correr e fugir
     responseText: 

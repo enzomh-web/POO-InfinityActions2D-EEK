@@ -15,14 +15,29 @@ MonoBehaviour:
   eventID: Evento Inicial
   steps:
   - text: "O que fa\xE7o agora?"
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0.3}
+      prefab: {fileID: 0}
+      sprite: {fileID: 21300000, guid: a4830442a8dbc7a2c9bbff911014cbcd, type: 3}
+      animations:
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
+      - animationType: 1
+        animationMoment: 2
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   choices:
   - text: Seguir em frente
     responseText: Seguindo em frente
     spriteConfig:
       spawnPos: {x: 0, y: 0}
       prefab: {fileID: 0}
-      sprite: {fileID: 0}
+      sprite: {fileID: -8360621857648827146, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -39,7 +54,8 @@ MonoBehaviour:
     spriteConfig:
       spawnPos: {x: 0, y: 0}
       prefab: {fileID: 0}
-      sprite: {fileID: 0}
+      sprite: {fileID: -2554822408315757945, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -56,7 +72,8 @@ MonoBehaviour:
     spriteConfig:
       spawnPos: {x: 0, y: 0}
       prefab: {fileID: 0}
-      sprite: {fileID: 0}
+      sprite: {fileID: -4484386481748707659, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25
@@ -73,7 +90,8 @@ MonoBehaviour:
     spriteConfig:
       spawnPos: {x: 0, y: 0}
       prefab: {fileID: 0}
-      sprite: {fileID: 0}
+      sprite: {fileID: -105911007907788231, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations: []
     outcomes:
     - targetEvent: {fileID: 11400000, guid: 8209061eea8e41e51851ddb93c7d9f46, type: 2}
       probability: 25

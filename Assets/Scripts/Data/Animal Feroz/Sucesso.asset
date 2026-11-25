@@ -15,6 +15,20 @@ MonoBehaviour:
   eventID: Sucesso em qualquer evento do animal feroz
   steps:
   - text: "Uf\xE1! Consegui escapar, mas \xE9 bom n\xE3o passar mais ali!"
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: -4484386481748707659, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations:
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
+      - animationType: 1
+        animationMoment: 2
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   choices: []
   isTerminalEvent: 0

@@ -15,8 +15,26 @@ MonoBehaviour:
   eventID: Encontrar caminho
   steps:
   - text: "Inacredit\xE1vel! Encontrei um novo caminho."
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0.3}
+      prefab: {fileID: 0}
+      sprite: {fileID: 21300000, guid: a4830442a8dbc7a2c9bbff911014cbcd, type: 3}
+      animations:
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
+      - animationType: 1
+        animationMoment: 2
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   - text: Seguindo em frente com a coragem a mil.
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: -105911007907788231, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
+      animations: []
   choices: []
   isTerminalEvent: 0

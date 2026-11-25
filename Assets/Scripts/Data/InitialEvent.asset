@@ -18,12 +18,12 @@ MonoBehaviour:
     spriteConfigs:
     - spawnPos: {x: 0, y: 0}
       prefab: {fileID: 0}
-      sprite: {fileID: 7359401131090198652, guid: 672edb62e9b86bc23badc813c8b83de4, type: 3}
+      sprite: {fileID: -8360621857648827146, guid: 2e2ce637bfb6d656aa3ebac6d579c312, type: 3}
       animations:
-      - animationType: 3
-        animationMoment: 1
-        duration: 0.7
-        targetPos: {x: 0.3, y: 0}
-        rotationSpeed: 220
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.2
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   choices: []
   isTerminalEvent: 0

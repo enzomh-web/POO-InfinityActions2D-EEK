@@ -15,6 +15,20 @@ MonoBehaviour:
   eventID: 
   steps:
   - text: O personagem joga a pedra fora
-    spriteConfigs: []
+    spriteConfigs:
+    - spawnPos: {x: 0, y: 0}
+      prefab: {fileID: 0}
+      sprite: {fileID: -2182124076254010665, guid: 4b0bb19f0f2d4463fb8a782d76f4d0ce, type: 3}
+      animations:
+      - animationType: 1
+        animationMoment: 0
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
+      - animationType: 1
+        animationMoment: 2
+        duration: 0.1
+        targetPos: {x: 0, y: 0}
+        rotationSpeed: 0
   choices: []
   isTerminalEvent: 0

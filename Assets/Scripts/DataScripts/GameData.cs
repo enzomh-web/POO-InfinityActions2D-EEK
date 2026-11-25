@@ -4,8 +4,8 @@ public static class GameData
 {
     public enum SceneEnum
     {
-        PLAY = 0,
-        TITLE = 1,
+        TITLE = 0,
+        PLAY = 1,
         CREDITS = 2,
         ENDGAME = 3
     }
